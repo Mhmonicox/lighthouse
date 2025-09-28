@@ -8,7 +8,7 @@ RUN cd lighthouse && LD_LIBRARY_PATH=/lighthouse/testing/antithesis/libvoidstar/
 # build lcli binary directly with cargo install command, bypassing the makefile
 RUN cargo install --path /lighthouse/lcli --force --locked
 
-FROM ubuntu:latest
+FROM ubuntu:24.10
 RUN apt-get update && apt-get -y upgrade && apt-get install -y --no-install-recommends \
   libssl-dev \
   ca-certificates \
